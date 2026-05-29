@@ -1,0 +1,346 @@
+\documentclass[11pt]{beamer}
+
+\usetheme{Frankfurt}
+\setbeamertemplate{navigation symbols}{}
+
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{url}
+
+\author{Nathan Pereira Gomes de Sousa}
+\title{Curso de R para Economistas}
+\subtitle{Encontro 1 - Introdução ao R e ao Ambiente Computacional}
+\institute{gECo lab \\ UAEF-UFCG}
+\date{\today}
+
+\logo{%
+	\makebox[0.95\paperwidth]{%
+		\hfill%
+		\includegraphics[scale=.2]{figs/ufcg_geco.png}
+	}%
+}
+
+\begin{document}
+	
+	%------------------------------------------------
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	%------------------------------------------------
+	\begin{frame}{Sumário}
+		\centering
+		\tableofcontents
+	\end{frame}
+	
+	%================================================
+	\section{Apresentação do curso}
+	
+	%------------------------------------------------
+	\begin{frame}{Apresentação do curso}
+		
+		\textbf{Curso básico de R aplicado à Economia:}
+		\begin{itemize}
+			\item Carga horária presencial: 20 horas.
+			\item Avaliação: Apresentação de um Script R dia \textbf{19} de junho.
+		\end{itemize}
+		
+	\end{frame}
+	
+	%------------------------------------------------
+	\begin{frame}{Objetivo geral}
+		
+		Introduzir o uso da linguagem R como ferramenta aplicada à Economia, apresentando o fluxo básico de uma análise empírica:
+		
+		\vspace{0.5cm}
+		
+		\begin{center}
+			\textbf{Organizar dados $\rightarrow$ Explorar dados $\rightarrow$ Visualizar dados $\rightarrow$ Estimar modelos}
+		\end{center}
+		
+	\end{frame}
+	
+	%------------------------------------------------
+	\begin{frame}{Estrutura do curso}
+		
+		\begin{enumerate}
+			\item Introdução ao R e ao ambiente computacional;
+			\item Fundamentos do R e importação de dados;
+			\item Transformação e análise exploratória;
+			\item Visualização de dados e comunicação empírica;
+			\item Introdução à econometria no R e avaliação final.
+		\end{enumerate}
+		
+	\end{frame}
+	
+	%================================================
+	\section{O papel do R na Econometria}
+	
+	%------------------------------------------------
+	\begin{frame}{O papel do R na Econometria}
+		
+		A Econometria busca transformar modelos teóricos em evidências empíricas.
+		
+		\vspace{0.4cm}
+		
+		\begin{center}
+			\textbf{Teoria econômica + Dados + Métodos estatísticos + Computação}
+		\end{center}
+		
+		\vspace{0.4cm}
+		
+		O R entra como ferramenta para organizar dados, realizar cálculos, produzir gráficos e estimar modelos.
+		
+	\end{frame}
+	
+	%------------------------------------------------
+	\begin{frame}{Do modelo teórico ao resultado empírico}
+		
+		Exemplo simples:
+		
+		\[
+		y = \beta_0 + \beta_1x + \varepsilon
+		\]
+		
+		\vspace{0.3cm}
+		
+		\begin{itemize}
+			\item $y$: variável dependente;
+			\item $x$: variável explicativa;
+			\item $\beta_1$: efeito estimado de $x$ sobre $y$;
+			\item $\varepsilon$: termo de erro.
+		\end{itemize}
+		
+	\end{frame}
+	
+	%------------------------------------------------
+	\begin{frame}{O R como ferramenta acadêmica}
+		
+		\begin{itemize}
+			\item Gratuito e de código aberto;
+			\item Muito utilizado em pesquisa econômica;
+			\item Forte integração com estatística e econometria;
+			\item Permite análises reproduzíveis;
+			\item Possui grande comunidade e muitos pacotes.
+		\end{itemize}
+		
+	\end{frame}
+	
+	%================================================
+	\section{O que é o R}
+	
+	%------------------------------------------------
+	\begin{frame}{O que é o R?}
+		
+		O R é uma linguagem de programação e um ambiente estatístico utilizado para:
+		
+		\begin{itemize}
+			\item manipulação de dados;
+			\item análise estatística;
+			\item visualização de dados;
+			\item estimação de modelos;
+			\item produção de relatórios e pesquisas reproduzíveis.
+		\end{itemize}
+		
+	\end{frame}
+	
+	%------------------------------------------------
+	\begin{frame}{R e RStudio}
+		
+		\begin{block}{R}
+			É a linguagem de programação e o ambiente estatístico.
+		\end{block}
+		
+		\begin{block}{RStudio}
+			É uma interface que facilita o uso do R.
+		\end{block}
+		
+		\vspace{0.3cm}
+		
+		\begin{center}
+			\textbf{R é o motor. RStudio é o painel de controle.}
+		\end{center}
+		
+	\end{frame}
+	
+	%================================================
+	\section{Instalação e ambiente de trabalho}
+	
+	%------------------------------------------------
+	\begin{frame}{Instalação}
+		
+		Para utilizar o R, precisamos instalar:
+		
+		\begin{enumerate}
+			\item R;
+			\item RStudio;
+			\item Pacotes necessários para o curso.
+		\end{enumerate}
+		
+		\vspace{0.4cm}
+		
+		Pacotes iniciais:
+		
+		\begin{itemize}
+			\item \texttt{tidyverse}
+			\item \texttt{ggplot2}
+			\item \texttt{dplyr}
+			\item \texttt{readr}
+		\end{itemize}
+		
+	\end{frame}
+	
+	%------------------------------------------------
+	\begin{frame}{Conhecendo o RStudio}
+		
+		O RStudio é organizado em painéis:
+		
+		\begin{itemize}
+			\item \textbf{Script}: onde escrevemos os códigos;
+			\item \textbf{Console}: onde os comandos são executados;
+			\item \textbf{Environment}: onde aparecem os objetos criados;
+			\item \textbf{Files/Plots/Packages}: arquivos, gráficos e pacotes.
+		\end{itemize}
+		
+	\end{frame}
+	
+	%------------------------------------------------
+	\begin{frame}{Script e Console}
+		
+		\begin{block}{Console}
+			Espaço para executar comandos diretamente.
+		\end{block}
+		
+		\begin{block}{Script}
+			Arquivo onde escrevemos, salvamos e organizamos os comandos.
+		\end{block}
+		
+		\vspace{0.3cm}
+		
+		\begin{center}
+			\textbf{No curso, o foco será escrever scripts organizados e comentados.}
+		\end{center}
+		
+	\end{frame}
+	
+	%================================================
+	\section{Organização e reprodutibilidade}
+	
+	%------------------------------------------------
+	\begin{frame}{Organização de arquivos}
+		
+		Uma boa análise começa com uma boa organização.
+		
+		\vspace{0.3cm}
+		
+		Exemplo de estrutura:
+		
+		\begin{itemize}
+			\item \texttt{dados/}
+			\item \texttt{scripts/}
+			\item \texttt{resultados/}
+			\item \texttt{graficos/}
+			\item \texttt{relatorio/}
+		\end{itemize}
+		
+	\end{frame}
+	
+	%------------------------------------------------
+	\begin{frame}{Projetos no RStudio}
+		
+		Projetos do RStudio ajudam a manter a análise organizada.
+		
+		\begin{itemize}
+			\item Facilitam o uso de caminhos relativos;
+			\item Evitam erros com diretórios;
+			\item Organizam scripts, dados e resultados;
+			\item Melhoram a reprodutibilidade.
+		\end{itemize}
+		
+	\end{frame}
+	
+	%------------------------------------------------
+	\begin{frame}{Boas práticas}
+		
+		\begin{itemize}
+			\item Usar nomes claros para arquivos e objetos;
+			\item Comentar partes importantes do código;
+			\item Separar dados brutos de dados tratados;
+			\item Manter scripts organizados por etapas;
+			\item Evitar alterar manualmente bases originais.
+		\end{itemize}
+		
+	\end{frame}
+	
+	%------------------------------------------------
+	\begin{frame}{Erros frequentes}
+		
+		\begin{itemize}
+			\item Não saber onde o arquivo está salvo;
+			\item Confundir vírgula e ponto decimal;
+			\item Esquecer de instalar ou carregar pacotes;
+			\item Usar nomes de objetos diferentes;
+			\item Não salvar o script.
+		\end{itemize}
+		
+	\end{frame}
+	
+	%================================================
+	\section{Atividade prática}
+	
+	%------------------------------------------------
+	\begin{frame}{Atividade prática do encontro}
+		
+		Ao final deste encontro, cada participante deverá:
+		
+		\begin{enumerate}
+			\item Criar uma pasta para o curso;
+			\item Criar um projeto no RStudio;
+			\item Criar um script inicial;
+			\item Instalar e carregar pacotes básicos;
+			\item Executar os primeiros comandos no R.
+		\end{enumerate}
+		
+	\end{frame}
+	
+	%------------------------------------------------
+	\begin{frame}[fragile]{Primeiros comandos}
+		
+		\begin{verbatim}
+			# Meu primeiro script em R
+			
+			2 + 2
+			
+			nome <- "Curso de R para Economistas"
+			
+			print(nome)
+		\end{verbatim}
+		
+	\end{frame}
+	
+	%------------------------------------------------
+	\begin{frame}{Encerramento do Encontro 1}
+		
+		Hoje vimos:
+		
+		\begin{itemize}
+			\item O objetivo geral do curso;
+			\item O papel do R na análise econômica;
+			\item A diferença entre R e RStudio;
+			\item A estrutura básica do RStudio;
+			\item Organização de projetos e boas práticas.
+		\end{itemize}
+		
+		\vspace{0.4cm}
+		
+		No próximo encontro: fundamentos do R e importação de dados.
+		
+	\end{frame}
+	
+\end{document}

@@ -1,0 +1,254 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{setspace}
+
+\geometry{margin=2.5cm}
+
+\title{\textbf{Curso Básico de R para Economistas}\\
+	Fundamentos}
+\author{}
+\date{}
+
+\begin{document}
+	
+	\maketitle
+	
+	\section*{Curso de Extensão}
+	
+	\noindent \textbf{Carga horária:} 20h (5 encontros)
+	
+	\noindent \textbf{Coordenador:} Sérgio Luiz de Medeiros Rivero
+	
+	\noindent \textbf{Instrutores:} Nathan Pereira Gomes de Sousa, Ryan Pereira Oliveira, Witiny Leandro Pereira Ramos
+	
+	\noindent \textbf{Público-alvo:} Estudantes de graduação em Economia e áreas afins.
+	
+	\noindent \textbf{Pré-requisitos:} Não há pré-requisitos formais. Recomenda-se familiaridade básica com regressão linear e conceitos introdutórios de estatística e econometria.
+	
+	\noindent \textbf{Formato:} 5 encontros presenciais totalizando 20h, combinando exposição teórica e atividades práticas no RStudio.
+	
+	
+	\section*{Objetivo Geral}
+	
+	
+	Introduzir o uso da linguagem R como ferramenta aplicada à Economia, apresentando o fluxo básico de uma análise empírica, desde a organização dos dados até a estimação e interpretação de modelos econométricos simples.
+	
+	\section*{Objetivos Específicos}
+	
+	\begin{itemize}
+		\item Apresentar o R como ambiente computacional utilizado na pesquisa econômica;
+		
+		\item Familiarizar os participantes com o RStudio e com boas práticas iniciais de organização e reprodutibilidade;
+		
+		\item Introduzir noções básicas de programação em R voltadas à análise de dados;
+		
+		\item Ensinar procedimentos de importação, organização e exploração de bases de dados;
+		
+		\item Desenvolver visualizações básicas para análise de dados;
+		
+		\item Estimar e interpretar modelos de regressão linear simples no R.
+	\end{itemize}
+	
+	\section*{Metodologia}
+	
+	
+	O curso será conduzido por meio de aulas expositivas integradas a demonstrações práticas no RStudio. Os participantes acompanharão a execução dos códigos e realizarão exercícios guiados, com ênfase na conexão entre teoria econômica, econometria e implementação computacional.
+		
+	Será adotada uma abordagem progressiva, iniciando pela organização do ambiente computacional e avançando para aplicações práticas de análise empírica utilizando bases de dados econômicos.
+	
+	Ao longo das aulas serão introduzidos novos métodos, pacotes e ferramentas conforme o avanço da turma, permitindo contato inicial com recursos modernos do ecossistema R.
+	
+	\section*{Avaliação}
+	
+	A avaliação ocorrerá de forma prática e processual, considerando:
+	
+	\begin{itemize}
+		\item Participação nas atividades desenvolvidas durante os encontros;
+		
+		\item Execução dos exercícios propostos;
+		
+		\item Elaboração e apresentação final de uma pesquisa empírica simples em script R, contendo procedimentos de importação, tratamento, análise descritiva e/ou estimação de um modelo de regressão linear simples.
+	\end{itemize}
+	
+	As apresentações finais ocorrerão no dia \textbf{19} de junho.
+	
+	Ao final do curso, os participantes terão acesso aos scripts utilizados durante as aulas, contendo comentários explicativos para estudo posterior.
+	
+	\section*{Conteúdo Programático}
+	
+	\subsection*{Encontro 1 - Introdução ao R e ao ambiente computacional}
+	
+	\begin{enumerate}[label=\arabic*.]
+		
+		\item Apresentação do curso
+		\begin{itemize}
+			\item Objetivos e estrutura geral do curso
+			\item Fluxo básico de uma análise empírica
+			\item O papel do R na pesquisa econômica
+		\end{itemize}
+		
+		\item Introdução ao ambiente computacional
+		\begin{itemize}
+			\item O que é o R
+			\item Diferença entre R e RStudio
+			\item Instalação do R e RStudio
+			\item Estrutura do ambiente RStudio
+		\end{itemize}
+		
+		\item Organização e reprodutibilidade
+		\begin{itemize}
+			\item Scripts e projetos no RStudio
+			\item Diretórios de trabalho
+			\item Organização de arquivos
+			\item Boas práticas e erros frequentes
+		\end{itemize}
+		
+	\end{enumerate}
+	
+	\subsection*{Encontro 2 - Fundamentos do R e importação de dados}
+	
+	\begin{enumerate}[label=\arabic*.]
+		\setcounter{enumi}{3}
+		
+		\item Conceitos básicos da linguagem R
+		\begin{itemize}
+			\item Objetos e funções
+			\item Vetores e data frames
+			\item Noções básicas de sintaxe
+			\item Operações básicas no R
+		\end{itemize}
+		
+		\item Importação e exploração de dados
+		\begin{itemize}
+			\item Conceito de base de dados em Econometria
+			\item Importação de arquivos CSV e Excel
+			\item Estrutura e visualização de bases de dados
+			\item Primeira exploração dos dados
+		\end{itemize}
+		
+	\end{enumerate}
+	
+	\subsection*{Encontro 3 - Transformação e análise exploratória de dados}
+	
+	\begin{enumerate}[label=\arabic*.]
+		\setcounter{enumi}{5}
+		
+		\item Transformação de dados
+		\begin{itemize}
+			\item Seleção e filtragem de dados
+			\item Criação de variáveis
+			\item Organização e agregação de informações
+			\item Introdução ao pacote \texttt{dplyr}
+		\end{itemize}
+		
+		\item Análise exploratória de dados
+		\begin{itemize}
+			\item Estatísticas descritivas
+			\item Interpretação inicial dos dados
+			\item Construção de tabelas
+			\item Introdução ao pacote \texttt{flextable}
+		\end{itemize}
+		
+	\end{enumerate}
+	
+	\subsection*{Encontro 4 - Visualização de dados, introdução à econometria no R e comunicação empírica}
+	
+	\begin{enumerate}[label=\arabic*.]
+		\setcounter{enumi}{7}
+		
+		\item Visualização de dados no R
+		\begin{itemize}
+			\item Introdução ao pacote \texttt{ggplot2}
+			\item Gráficos de barras, linhas e dispersão
+			\item Visualização aplicada à análise econômica
+			\item Comunicação de resultados empíricos
+		\end{itemize}
+		
+		\item Introdução à regressão linear no R
+		\begin{itemize}
+			\item Estimação de modelos de regressão linear simples
+			\item Interpretação dos coeficientes
+			\item Relação entre teoria econométrica e implementação computacional
+			\item Apresentação de resultados
+		\end{itemize}
+		
+		\item Apoio ao desenvolvimento da atividade final
+		\begin{itemize}
+			\item Estruturação do script final
+			\item Organização da análise empírica
+			\item Revisão dos principais conceitos do curso
+		\end{itemize}
+		
+	\end{enumerate}
+	
+	\subsection*{Encontro 5 - Avaliação final}
+	
+	\begin{enumerate}[label=\arabic*.]
+		\setcounter{enumi}{10}
+		
+		\item Avaliação final
+		\begin{itemize}
+			\item Apresentação da atividade empírica desenvolvida
+			\item Discussão dos resultados obtidos
+			\item Encerramento e orientações para continuidade dos estudos
+		\end{itemize}
+		
+	\end{enumerate}
+	
+	\section*{Resultados de Aprendizagem}
+	
+	Ao final do curso, espera-se que os participantes sejam capazes de:
+	
+	\begin{itemize}
+		\item Utilizar o RStudio como ambiente básico de análise empírica;
+		
+		\item Importar e organizar bases de dados simples no R;
+		
+		\item Realizar análises descritivas iniciais;
+		
+		\item Construir visualizações básicas;
+		
+		\item Estimar e interpretar modelos de regressão linear simples;
+		
+		\item Desenvolver scripts reproduzíveis aplicados a problemas econômicos.
+	\end{itemize}
+	
+	\section*{Software e Dados}
+	
+	\textbf{Software:}
+	\begin{itemize}
+		\item R
+		\item RStudio
+	\end{itemize}
+	
+	\textbf{Pacotes:}
+	\begin{itemize}
+		\item tidyverse
+		\item ggplot2
+		\item flextable
+	\end{itemize}
+	
+	\textbf{Fontes de dados:}
+	\begin{itemize}
+		\item Bases fornecidas durante o curso;
+		\item IBGE;
+		\item IPEADATA;
+		\item Banco Central do Brasil.
+	\end{itemize}
+	
+	\section*{Bibliografia Básica}
+	
+	\begin{itemize}
+		\item WICKHAM, Hadley; ÇETINKAYA-RUNDEL, Mine; GROLEMUND, Garrett. \textit{R para Ciência de Dados}. 2. ed.
+		
+		\item WOOLDRIDGE, Jeffrey M. \textit{Introdução à Econometria: uma abordagem moderna}.
+		
+		\item GUJARATI, Damodar N.; PORTER, Dawn C. \textit{Econometria Básica}.
+	\end{itemize}
+	
+\end{document}

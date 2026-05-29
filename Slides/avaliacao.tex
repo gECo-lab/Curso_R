@@ -1,0 +1,287 @@
+\documentclass[11pt]{beamer}
+
+\usetheme{CambridgeUS}
+\setbeamertemplate{navigation symbols}{}
+
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+\author{Nathan Sousa}
+\title{Curso de R para Economistas}
+\subtitle{Projeto de Avaliação}
+\institute{gECo lab \\ UAEF-UFCG}
+\date{\today}
+
+\logo{%
+	\makebox[0.95\paperwidth]{%
+		\hfill%
+		\includegraphics[scale=.2]{figs/ufcg_geco.png}
+	}%
+}
+
+\begin{document}
+	
+	%================================================
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	%================================================
+	\begin{frame}{Objetivo da avaliação}
+		
+		A avaliação será realizada por meio de um projeto simples de análise exploratória de dados utilizando R.
+		
+		\vspace{0.4cm}
+		
+		\begin{center}
+			\textbf{Dados $\rightarrow$ Organização $\rightarrow$ Análise $\rightarrow$ Interpretação}
+		\end{center}
+		
+		\vspace{0.4cm}
+		
+		O objetivo principal é praticar os conceitos apresentados ao longo do curso.
+		
+	\end{frame}
+	
+	%================================================
+	\begin{frame}{Estrutura geral do projeto}
+		
+		O projeto deverá conter:
+		
+		\begin{enumerate}
+			\item Escolha de uma base de dados;
+			\item Importação e organização da base;
+			\item Limpeza e transformação dos dados;
+			\item Análise exploratória;
+			\item Construção de gráficos e tabelas;
+			\item Interpretação dos resultados.
+		\end{enumerate}
+		
+	\end{frame}
+	
+	%================================================
+	\begin{frame}{Escolha da base de dados}
+		
+		Sugestões de bases:
+		
+		\begin{itemize}
+			\item SIDRA / IBGE;
+			\item IPEADATA;
+			\item Banco Central;
+			\item DataSUS;
+		\end{itemize}
+		
+		\vspace{0.4cm}
+		
+		Também é possível utilizar uma base de interesse próprio.
+		
+	\end{frame}
+	
+	%================================================
+	\begin{frame}{Organização do projeto}
+		
+		Recomenda-se:
+		
+		\begin{itemize}
+			\item Criar um projeto no RStudio;
+			\item Organizar pastas:
+			\begin{itemize}
+				\item dados/
+				\item scripts/
+				\item resultados/
+				\item gráficos/
+			\end{itemize}
+			\item Comentar os códigos;
+			\item Salvar todas as etapas da análise.
+		\end{itemize}
+		
+	\end{frame}
+	
+	%================================================
+	\begin{frame}{Definição da pergunta}
+		
+		Toda análise deve partir de uma pergunta simples.
+		
+		\vspace{0.3cm}
+		
+		Exemplos:
+		
+		\begin{itemize}
+			\item Como a inflação evoluiu nos últimos anos?
+			\item Existe relação entre renda e escolaridade?
+			\item Como o desemprego varia entre regiões?
+			\item Quais municípios possuem melhores indicadores de saúde?
+		\end{itemize}
+		
+	\end{frame}
+	
+	%================================================
+	\begin{frame}{Descrição da base de dados}
+		
+		A apresentação deve explicar:
+		
+		\begin{itemize}
+			\item Qual é a fonte dos dados;
+			\item O que representa cada observação;
+			\item Quais variáveis estão disponíveis;
+			\item Quais tipos de variáveis existem;
+			\item Quais tratamentos foram necessários.
+		\end{itemize}
+		
+	\end{frame}
+	
+	%================================================
+	\begin{frame}{Limpeza e transformação}
+		
+		Exemplos de procedimentos esperados:
+		
+		\begin{itemize}
+			\item Filtrar observações;
+			\item Selecionar variáveis;
+			\item Organizar tabelas;
+			\item Tratar valores ausentes(se necessário);
+			\item Padronizar informações.
+		\end{itemize}
+		
+	\end{frame}
+	
+	%================================================
+	\begin{frame}{Análise exploratória}
+		
+		A análise pode incluir:
+		
+		\begin{itemize}
+			\item Estatísticas descritivas;
+			\item Médias e distribuições;
+			\item Tabelas;
+			\item Gráficos;
+			\item Comparações entre grupos;
+			\item Evolução temporal;
+			\item Interpretação econômica.
+		\end{itemize}
+		
+	\end{frame}
+	
+	%================================================
+	\begin{frame}{Visualização de dados}
+		
+		O projeto deve conter pelo menos um gráfico.
+		
+		\vspace{0.3cm}
+		
+		Exemplos:
+		
+		\begin{itemize}
+			\item Gráfico de barras;
+			\item Gráfico de linhas;
+			\item Histograma;
+			\item Dispersão;
+		\end{itemize}
+		
+		\vspace{0.3cm}
+		
+		Preferencialmente utilizando o pacote \texttt{ggplot2}.
+		
+	\end{frame}
+	
+	%================================================
+	\begin{frame}{Opcional: regressão linear}
+		
+		Caso faça sentido para a análise, o projeto pode incluir uma regressão linear simples.
+		
+		\vspace{0.3cm}
+		
+		\[
+		y = \beta_0 + \beta_1x + \varepsilon
+		\]
+		
+		\vspace{0.3cm}
+		
+		Utilizando:
+		
+		\begin{itemize}
+			\item Função \texttt{lm()}
+			\item interpretação básica dos coeficientes;
+			\item discussão econômica do resultado.
+		\end{itemize}
+		
+	\end{frame}
+	
+	%================================================
+	\begin{frame}{Elementos mínimos}
+		
+		O script final deve conter:
+		
+		\begin{enumerate}
+			\item Importação da base;
+			\item Organização dos dados;
+			\item Estatísticas descritivas;
+			\item Pelo menos um gráfico;
+			\item Interpretação dos resultados.
+		\end{enumerate}
+		
+	\end{frame}
+	
+	%================================================
+	\begin{frame}{Apresentação final}
+		
+		Na apresentação final, cada grupo deverá explicar:
+		
+		\begin{itemize}
+			\item A base utilizada;
+			\item A pergunta da análise;
+			\item Os principais comandos utilizados;
+			\item Os resultados encontrados;
+			\item Dificuldades e limitações.
+		\end{itemize}
+		
+	\end{frame}
+	
+	%================================================
+	\begin{frame}{Critérios de avaliação}
+		
+		A avaliação considerará:
+		
+		\begin{itemize}
+			\item Organização do script;
+			\item Uso correto dos comandos;
+			\item Clareza da análise;
+			\item Qualidade dos gráficos e tabelas;
+			\item Interpretação econômica;
+			\item Apresentação final.
+		\end{itemize}
+		
+	\end{frame}
+	
+	%================================================
+	\begin{frame}{Orientação importante}
+		
+		\begin{center}
+			\Large
+			O objetivo principal não é produzir uma pesquisa perfeita.
+			
+			\vspace{0.5cm}
+			
+			\Large
+			O objetivo é aprender o fluxo de análise de dados no R.
+		\end{center}
+		
+	\end{frame}
+	
+	%================================================
+	\begin{frame}{Dúvidas?}
+		
+		\centering
+		
+		\Huge Obrigado!
+		
+		\vspace{1cm}
+		
+		\Large Perguntas? Entre em contato com \texttt{nathanpsousa7@gmail.com}
+		
+	\end{frame}
+	
+\end{document}

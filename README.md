@@ -1,1 +1,1 @@
-Teste inicial
+Texto inicial para o curso
